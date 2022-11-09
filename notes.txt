@@ -1,0 +1,14 @@
+personal finance
+auto lease
+mortaguage 
+******contract level fwd def tag
+
+credit card>>cutomer id >>fwd def tag>>after removing duplicate customer id
+
+*******************************************************************
+step-1) Create Portfolio segmentation as per the mapping send by Ganesh.
+step-2) Append the credit card data to the consolidated data(1.6 cr + 0.54 cr = 2.1 cr)
+            - put NA's for columns which is not in credit card data.
+step-3) Create default tag for each record i.e contract_no level default tag.
+step-4) new_df = df.groupby('customer_id','id_date').max(def_tag).
+step-5) merge new_df with df based on 'customer_id' and 'id_date'.
